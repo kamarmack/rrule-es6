@@ -1,16 +1,28 @@
-import RRuleClass from 'rrule';
-const rrule_lib = RRuleClass as unknown as {
+import RRuleClass, {
+  Frequency as FrequencyEnum,
+  rrulestr as RRuleStrFunc,
+  RRuleSet as RRuleSetClass,
+  Weekday as WeekdayClass,
+} from 'rrule';
+type RRuleCommonJS = {
+  Frequency: typeof FrequencyEnum;
+  rrulestr: typeof RRuleStrFunc;
   RRule: typeof RRuleClass;
+  RRuleSet: typeof RRuleSetClass;
+  Weekday: typeof WeekdayClass;
 };
-export const { RRule } = rrule_lib;
-export default RRule;
-export {
-  ByWeekday,
+const rrule_common_js = RRuleClass as unknown as RRuleCommonJS;
+export const {
   Frequency,
-  Options,
   rrulestr,
-  RRuleStrOptions,
+  RRule,
   RRuleSet,
   Weekday,
+} = rrule_common_js;
+export {
+  ByWeekday,
+  Options,
+  RRuleStrOptions,
   WeekdayStr,
 } from 'rrule';
+export default RRule;
