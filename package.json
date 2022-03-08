@@ -1,0 +1,20 @@
+{
+  "author": "kamarmack <https://github.com/kamarmack>",
+  "bugs": "https://github.com/kamarmack/rrule-es6/issues",
+  "dependencies": {
+    "rrule": "^2.6.9"
+  },
+  "description": "Wrapper around rrule enabling ES6 import syntax for Node16 + TSv4",
+  "homepage": "https://github.com/kamarmack/rrule-es6",
+  "keywords": [],
+  "license": "BSD-3-Clause",
+  "main": "dist/index.js",
+  "name": "@mackgevanni/rrule-es6",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kamarmack/rrule-es6.git"
+  },
+  "type": "module",
+  "types": "dist/index.d.ts",
+  "version": "1.0.0"
+}
